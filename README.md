@@ -1,19 +1,40 @@
 # matchdep
 > Use minimatch to filter npm module dependencies by name.
 
-## Usage
+## Examples
 
 ```js
 var matchdep = require('matchdep');
 
-// Filter dependencies
-matchdep.filter(require('./package.json'), 'mini*');
+// Filter dependencies (with autoloading of package.json from cwd)
+matchdep.filter('mini*');
 
-// Filter devDependencies
-matchdep.filterDev(require('./package.json'), 'grunt-contrib*');
+// Filter devDependencies (with config string indicating file to be required)
+matchdep.filterDev('grunt-contrib*', './package.json');
 
-// Filter all dependencies
-matchdep.filterAll(require('./package.json'), '*');
+// Filter all dependencies (with explicit config provided)
+matchdep.filterAll('*', require('./package.json'));
 ```
 
-> Copyright (c) 2012 Tyler Kellen. See LICENSE for further details.
+## Usage
+
+```js
+filter(pattern, config)
+filterDev(pattern, config)
+filterAll(pattern, config)
+```
+
+### pattern
+Type: `String`
+Default: none
+
+[minimatch](/isaacs/minimatch) compatible pattern to filter dependencies.
+
+### config
+Type: `String` or `Object`
+Default: `path.resolve(process.cwd(),'package.json')`
+
+If config is a string, matchdep will attempt to require it.  If it is an object, it will be used directly.
+
+---
+Copyright (c) 2012 Tyler Kellen. See LICENSE for further details.

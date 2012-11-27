@@ -1,7 +1,7 @@
 {
   "name": "matchdep",
   "description": "Use minimatch to filter npm module dependencies by name.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "homepage": "https://github.com/tkellen/node-matchdep",
   "author": {
     "name": "Tyler Kellen",
