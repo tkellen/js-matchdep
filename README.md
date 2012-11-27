@@ -7,10 +7,10 @@
 var matchdep = require('matchdep');
 
 // Filter dependencies
-matchdep.filter(require('./package.json'), 'grunt-contrib*');
+matchdep.filter(require('./package.json'), 'mini*');
 
 // Filter devDependencies
-matchdep.filterDev(require('./package.json'), 'mini*');
+matchdep.filterDev(require('./package.json'), 'grunt-contrib*');
 
 // Filter all dependencies
 matchdep.filterAll(require('./package.json'), '*');
