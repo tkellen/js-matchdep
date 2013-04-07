@@ -36,6 +36,3 @@ Type: `String` or `Object`
 Default: `path.resolve(process.cwd(),'package.json')`
 
 If config is a string, matchdep will attempt to require it.  If it is an object, it will be used directly.
-
----
-Copyright (c) 2012 Tyler Kellen. See LICENSE for further details.
