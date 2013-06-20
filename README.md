@@ -29,7 +29,7 @@ filterAll(pattern, config)
 Type: `String`
 Default: none
 
-[minimatch](/isaacs/minimatch) compatible pattern to filter dependencies.
+[minimatch](https://github.com/isaacs/minimatch) compatible pattern to filter dependencies.
 
 ### config
 Type: `String` or `Object`
