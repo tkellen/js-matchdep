@@ -36,5 +36,10 @@
     "grunt": "~0.4.1",
     "grunt-cli": "~0.1.9"
   },
-  "keywords": []
+  "keywords": [
+    "package.json",
+    "dependencies",
+    "devDependencies",
+    "peerDependencies"
+  ]
 }
