@@ -11,10 +11,13 @@ var matchdep = require('matchdep');
 matchdep.filter('mini*');
 
 // Filter devDependencies (with config string indicating file to be required)
-matchdep.filterDev('grunt-contrib*', './package.json');
+matchdep.filterDev('grunt-contrib-*', './package.json');
+
+// Filter peerDependencies (with config string indicating file to be required)
+matchdep.filterDev('foo-{bar,baz}', './some-other.json');
 
 // Filter all dependencies (with explicit config provided)
-matchdep.filterAll('*', require('./package.json'));
+matchdep.filterAll('*', require('./yet-another.json'));
 ```
 
 ## Usage
@@ -22,6 +25,7 @@ matchdep.filterAll('*', require('./package.json'));
 ```js
 filter(pattern, config)
 filterDev(pattern, config)
+filterPeer(pattern, config)
 filterAll(pattern, config)
 ```
 
@@ -33,6 +37,6 @@ Default: none
 
 ### config
 Type: `String` or `Object`
-Default: `path.resolve(process.cwd(),'package.json')`
+Default: `path.resolve(process.cwd(), 'package.json')`
 
 If config is a string, matchdep will attempt to require it.  If it is an object, it will be used directly.
