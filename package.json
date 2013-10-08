@@ -31,10 +31,10 @@
     "minimatch": "~0.2.9"
   },
   "devDependencies": {
-    "grunt-contrib-jshint": "~0.1.0",
-    "grunt-contrib-nodeunit": "~0.1.0",
-    "grunt": "~0.4.0a",
-    "grunt-cli": "~0.1.1"
+    "grunt-contrib-jshint": "~0.6.4",
+    "grunt-contrib-nodeunit": "~0.2.1",
+    "grunt": "~0.4.1",
+    "grunt-cli": "~0.1.9"
   },
   "keywords": []
 }
