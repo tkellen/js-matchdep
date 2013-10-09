@@ -36,7 +36,17 @@ exports['matchdep'] = {
   },
   'default to package.json': function(test) {
     test.expect(1);
-    test.equal(matchdep.filterAll('*').join(), 'minimatch,findup-sync,grunt-contrib-jshint,grunt-contrib-nodeunit,grunt', 'should find all dependencies and devDependencies matching "*"');
+    test.equal(matchdep.filter('*').join(), 'minimatch,findup-sync,resolve,stack-trace', 'should find all dependencies and devDependencies matching "*"');
+    test.done();
+  },
+  'path is relative to calling module, not cwd': function(test) {
+    test.expect(5);
+    var submodule = require('./fixtures/submodule');
+    test.equal(submodule.defaultConfig().join(), 'pkg-1,pkg-2,pkg-3', 'should find all deps in package.json next to submodule');
+    test.equal(submodule.fileConfig().join(), 'pkg-1,pkg-2,pkg-3', 'should find all deps in package.json next to submodule');
+    test.equal(submodule.relativeConfig().join(), 'pkg-1,pkg-2,pkg-3', 'should find all deps in package.json next to submodule');
+    test.equal(submodule.relativeConfig2().join(), 'minimatch,findup-sync,resolve,stack-trace', 'should find all deps in ../../package.json from submodule');
+    test.equal(submodule.absoluteConfig().join(), 'pkg-1,pkg-2,pkg-3', 'should find all deps in package.json next to submodule');
     test.done();
   },
 };

@@ -29,7 +29,9 @@
   },
   "dependencies": {
     "minimatch": "~0.2.9",
-    "findup-sync": "~0.1.2"
+    "findup-sync": "~0.1.2",
+    "resolve": "~0.5.1",
+    "stack-trace": "0.0.7"
   },
   "devDependencies": {
     "grunt-contrib-jshint": "~0.6.4",
