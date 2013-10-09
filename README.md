@@ -46,9 +46,9 @@ If config is a string, matchdep will attempt to require it.  If it is an object,
 
 ## Release History
 
-2013-10-09 - v0.3 - support multiple pattern matches using [globule]
-2013-10-08 - v0.2 - refactor and support filtering peerDependencies
-2012-11-27 - v0.1 - initial release
+* 2013-10-09 - v0.3 - support multiple pattern matches using [globule]
+* 2013-10-08 - v0.2 - refactor and support filtering peerDependencies
+* 2012-11-27 - v0.1 - initial release
 
 
 [globule]: https://github.com/cowboy/node-globule
