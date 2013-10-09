@@ -25,16 +25,16 @@
     "node": ">= 0.8.0"
   },
   "scripts": {
-    "test": "./node_modules/.bin/grunt nodeunit"
+    "test": "grunt"
   },
   "dependencies": {
-    "minimatch": "~0.2.9"
+    "minimatch": "~0.2.9",
+    "findup-sync": "~0.1.2"
   },
   "devDependencies": {
     "grunt-contrib-jshint": "~0.6.4",
     "grunt-contrib-nodeunit": "~0.2.1",
-    "grunt": "~0.4.1",
-    "grunt-cli": "~0.1.9"
+    "grunt": "~0.4.1"
   },
   "keywords": [
     "package.json",

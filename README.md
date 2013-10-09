@@ -7,7 +7,7 @@
 ```js
 var matchdep = require('matchdep');
 
-// Filter dependencies (with autoloading of package.json from cwd)
+// Filter dependencies (by autoloading nearest package.json)
 matchdep.filter('mini*');
 
 // Filter devDependencies (with config string indicating file to be required)
@@ -37,6 +37,6 @@ Default: none
 
 ### config
 Type: `String` or `Object`
-Default: `path.resolve(process.cwd(), 'package.json')`
+Default: Path to nearest package.json.
 
 If config is a string, matchdep will attempt to require it.  If it is an object, it will be used directly.

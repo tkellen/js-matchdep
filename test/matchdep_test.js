@@ -36,7 +36,7 @@ exports['matchdep'] = {
   },
   'default to package.json': function(test) {
     test.expect(1);
-    test.equal(matchdep.filterAll('*').join(), 'minimatch,grunt-contrib-jshint,grunt-contrib-nodeunit,grunt,grunt-cli', 'should find all dependencies and devDependencies matching "*"');
+    test.equal(matchdep.filterAll('*').join(), 'minimatch,findup-sync,grunt-contrib-jshint,grunt-contrib-nodeunit,grunt', 'should find all dependencies and devDependencies matching "*"');
     test.done();
   },
 };
