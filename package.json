@@ -1,7 +1,7 @@
 {
   "name": "matchdep",
-  "description": "Use minimatch to filter npm module dependencies by name.",
-  "version": "0.2.0",
+  "description": "Use globule to filter npm module dependencies by name.",
+  "version": "0.3.0",
   "homepage": "https://github.com/tkellen/node-matchdep",
   "author": {
     "name": "Tyler Kellen",
@@ -28,10 +28,10 @@
     "test": "grunt"
   },
   "dependencies": {
-    "minimatch": "~0.2.9",
     "findup-sync": "~0.1.2",
     "resolve": "~0.5.1",
-    "stack-trace": "0.0.7"
+    "stack-trace": "0.0.7",
+    "globule": "~0.1.0"
   },
   "devDependencies": {
     "grunt-contrib-jshint": "~0.6.4",

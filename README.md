@@ -1,6 +1,6 @@
 # matchdep [![Build Status](https://secure.travis-ci.org/tkellen/node-matchdep.png?branch=master)](http://travis-ci.org/tkellen/node-matchdep)
 
-> Use minimatch to filter npm module dependencies by name.
+> Use [globule] to filter npm module dependencies by name.
 
 ## Examples
 
@@ -18,6 +18,9 @@ matchdep.filterDev('foo-{bar,baz}', './some-other.json');
 
 // Filter all dependencies (with explicit config provided)
 matchdep.filterAll('*', require('./yet-another.json'));
+
+// Filter all dependencies, exclude grunt (multiple matching patterns)
+matchdep.filterAll(['*','!grunt']);
 ```
 
 ## Usage
@@ -30,13 +33,22 @@ filterAll(pattern, config)
 ```
 
 ### pattern
-Type: `String`
-Default: none
+Type: `String|Array`
+Default: 'none'
 
-[minimatch](https://github.com/isaacs/minimatch) compatible pattern to filter dependencies.
+A [globule] compatible match pattern to filter dependencies.
 
 ### config
 Type: `String` or `Object`
 Default: Path to nearest package.json.
 
 If config is a string, matchdep will attempt to require it.  If it is an object, it will be used directly.
+
+## Release History
+
+2013-10-09 - v0.3 - support multiple pattern matches using [globule]
+2013-10-08 - v0.2 - refactor and support filtering peerDependencies
+2012-11-27 - v0.1 - initial release
+
+
+[globule]: https://github.com/cowboy/node-globule
