@@ -12,6 +12,10 @@ exports.relativeConfig = function() {
   return matchdep.filter('*', './package.json');
 };
 
+exports.relativeConfig2 = function() {
+  return matchdep.filter('*', '../../package.json');
+};
+
 exports.absoluteConfig = function() {
   return matchdep.filter('*', __dirname + '/package.json');
 };
