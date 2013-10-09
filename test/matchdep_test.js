@@ -36,7 +36,7 @@ exports['matchdep'] = {
   },
   'default to package.json': function(test) {
     test.expect(1);
-    test.equal(matchdep.filterAll('*').join(), 'minimatch,findup-sync,resolve,stack-trace,grunt-contrib-jshint,grunt-contrib-nodeunit,grunt', 'should find all dependencies and devDependencies matching "*"');
+    test.equal(matchdep.filter('*').join(), 'minimatch,findup-sync,resolve,stack-trace', 'should find all dependencies and devDependencies matching "*"');
     test.done();
   },
   'path is relative to calling module, not cwd': function(test) {
