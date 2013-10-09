@@ -4,8 +4,12 @@ exports.defaultConfig = function() {
   return matchdep.filter('*');
 };
 
-exports.relativeConfig = function() {
+exports.fileConfig = function() {
   return matchdep.filter('*', 'package.json');
+};
+
+exports.relativeConfig = function() {
+  return matchdep.filter('*', './package.json');
 };
 
 exports.absoluteConfig = function() {

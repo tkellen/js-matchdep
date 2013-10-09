@@ -40,9 +40,10 @@ exports['matchdep'] = {
     test.done();
   },
   'path is relative to calling module, not cwd': function(test) {
-    test.expect(3);
+    test.expect(4);
     var submodule = require('./fixtures/submodule');
     test.equal(submodule.defaultConfig().join(), 'pkg-1,pkg-2,pkg-3', 'should find all deps in package.json next to submodule');
+    test.equal(submodule.fileConfig().join(), 'pkg-1,pkg-2,pkg-3', 'should find all deps in package.json next to submodule');
     test.equal(submodule.relativeConfig().join(), 'pkg-1,pkg-2,pkg-3', 'should find all deps in package.json next to submodule');
     test.equal(submodule.absoluteConfig().join(), 'pkg-1,pkg-2,pkg-3', 'should find all deps in package.json next to submodule');
     test.done();
