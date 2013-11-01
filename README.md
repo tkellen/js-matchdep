@@ -14,7 +14,7 @@ matchdep.filter('mini*');
 matchdep.filterDev('grunt-contrib-*', './package.json');
 
 // Filter peerDependencies (with config string indicating file to be required)
-matchdep.filterDev('foo-{bar,baz}', './some-other.json');
+matchdep.filterPeer('foo-{bar,baz}', './some-other.json');
 
 // Filter all dependencies (with explicit config provided)
 matchdep.filterAll('*', require('./yet-another.json'));
