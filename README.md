@@ -1,6 +1,7 @@
 # matchdep [![Build Status](https://secure.travis-ci.org/tkellen/node-matchdep.png?branch=master)](http://travis-ci.org/tkellen/node-matchdep)
-
 > Use [globule] to filter npm module dependencies by name.
+
+[![NPM](https://nodei.co/npm/matchdep.png)](https://nodei.co/npm/matchdep/)
 
 ## Examples
 
@@ -46,6 +47,7 @@ If config is a string, matchdep will attempt to require it.  If it is an object,
 
 ## Release History
 
+* 2013-01-22 - v1.0 - throw when no package.json found.
 * 2013-10-09 - v0.3 - support multiple pattern matches using [globule]
 * 2013-10-08 - v0.2 - refactor and support filtering peerDependencies
 * 2012-11-27 - v0.1 - initial release
