@@ -1,7 +1,7 @@
 {
   "name": "matchdep",
   "description": "Use globule to filter npm module dependencies by name.",
-  "version": "0.3.0",
+  "version": "1.0.0",
   "homepage": "https://github.com/tkellen/node-matchdep",
   "author": {
     "name": "Tyler Kellen",
