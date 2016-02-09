@@ -1,5 +1,5 @@
 # matchdep [![Build Status](https://secure.travis-ci.org/tkellen/js-matchdep.svg?branch=master)](http://travis-ci.org/tkellen/js-matchdep)
-> Use [globule] to filter npm module dependencies by name.
+> Use [micromatch] to filter npm module dependencies by name.
 
 [![NPM](https://nodei.co/npm/matchdep.png)](https://nodei.co/npm/matchdep/)
 
@@ -37,7 +37,7 @@ filterAll(pattern, config)
 Type: `String|Array`
 Default: 'none'
 
-A [globule] compatible match pattern to filter dependencies.
+A [micromatch] compatible match pattern to filter dependencies.
 
 ### config
 Type: `String` or `Object`
