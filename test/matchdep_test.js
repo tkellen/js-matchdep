@@ -36,12 +36,12 @@ exports['matchdep'] = {
   },
   'multiple pattern support': function(test) {
     test.expect(1);
-    test.equal(matchdep.filterAll(['*','!globule']).join(), 'findup-sync,resolve,stack-trace,grunt-contrib-jshint,grunt-contrib-nodeunit,grunt', 'should find everything except globule');
+    test.equal(matchdep.filterAll(['*','!micromatch']).join(), 'findup-sync,resolve,stack-trace,grunt,grunt-contrib-jshint,grunt-contrib-nodeunit', 'should find everything except micromatch');
     test.done();
   },
   'default to package.json': function(test) {
     test.expect(1);
-    test.equal(matchdep.filter('*').join(), 'findup-sync,resolve,stack-trace,globule', 'should find all dependencies and devDependencies matching "*"');
+    test.equal(matchdep.filter('*').join(), 'findup-sync,micromatch,resolve,stack-trace', 'should find all dependencies and devDependencies matching "*"');
     test.done();
   },
   'path is relative to calling module, not cwd': function(test) {
@@ -50,7 +50,7 @@ exports['matchdep'] = {
     test.equal(submodule.defaultConfig().join(), 'pkg-1,pkg-2,pkg-3', 'should find all deps in package.json next to submodule');
     test.equal(submodule.fileConfig().join(), 'pkg-1,pkg-2,pkg-3', 'should find all deps in package.json next to submodule');
     test.equal(submodule.relativeConfig().join(), 'pkg-1,pkg-2,pkg-3', 'should find all deps in package.json next to submodule');
-    test.equal(submodule.relativeConfig2().join(), 'findup-sync,resolve,stack-trace,globule', 'should find all deps in ../../package.json from submodule');
+    test.equal(submodule.relativeConfig2().join(), 'findup-sync,micromatch,resolve,stack-trace', 'should find all deps in ../../package.json from submodule');
     test.equal(submodule.absoluteConfig().join(), 'pkg-1,pkg-2,pkg-3', 'should find all deps in package.json next to submodule');
     test.done();
   },
