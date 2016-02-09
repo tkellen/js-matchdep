@@ -1,18 +1,18 @@
 {
   "name": "matchdep",
-  "description": "Use globule to filter npm module dependencies by name.",
+  "description": "Use micromatch to filter npm module dependencies by name.",
   "version": "1.0.1",
-  "homepage": "https://github.com/tkellen/node-matchdep",
+  "homepage": "https://github.com/tkellen/js-matchdep",
   "author": {
     "name": "Tyler Kellen",
     "url": "http://goingslowly.com/"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/tkellen/node-matchdep.git"
+    "url": "git://github.com/tkellen/js-matchdep.git"
   },
   "bugs": {
-    "url": "https://github.com/tkellen/node-matchdep/issues"
+    "url": "https://github.com/tkellen/js-matchdep/issues"
   },
   "license": "MIT",
   "main": "lib/matchdep",
