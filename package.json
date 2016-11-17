@@ -24,6 +24,7 @@
   },
   "dependencies": {
     "findup-sync": "^0.4.3",
+    "micromatch": "^2.3.11",
     "resolve": "~1.1.6",
     "stack-trace": "0.0.9"
   },
