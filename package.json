@@ -23,14 +23,14 @@
     "test": "grunt"
   },
   "dependencies": {
-    "findup-sync": "~0.3.0",
-    "micromatch": "^2.3.7",
-    "resolve": "~1.1.6",
+    "findup-sync": "^0.4.3",
+    "micromatch": "^2.3.11",
+    "resolve": "^1.1.7",
     "stack-trace": "0.0.9"
   },
   "devDependencies": {
     "grunt": "~0.4.1",
-    "grunt-contrib-jshint": "~0.11.3",
+    "grunt-contrib-jshint": "^1.0.0",
     "grunt-contrib-nodeunit": "~0.4.1"
   },
   "keywords": [
