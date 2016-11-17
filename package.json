@@ -23,7 +23,7 @@
     "test": "grunt"
   },
   "dependencies": {
-    "findup-sync": "~0.3.0",
+    "findup-sync": "^0.4.3",
     "micromatch": "^2.3.7",
     "resolve": "~1.1.6",
     "stack-trace": "0.0.9"
