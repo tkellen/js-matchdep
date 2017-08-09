@@ -23,10 +23,10 @@
     "test": "grunt"
   },
   "dependencies": {
-    "findup-sync": "~0.3.0",
-    "micromatch": "^2.3.7",
-    "resolve": "~1.1.6",
-    "stack-trace": "0.0.9"
+    "findup-sync": "^2.0.0",
+    "micromatch": "^3.0.4",
+    "resolve": "^1.4.0",
+    "stack-trace": "0.0.10"
   },
   "devDependencies": {
     "grunt": "~0.4.1",
