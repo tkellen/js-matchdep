@@ -1,7 +1,7 @@
 {
   "name": "matchdep",
   "description": "Use micromatch to filter npm module dependencies by name.",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "homepage": "https://github.com/tkellen/js-matchdep",
   "author": {
     "name": "Tyler Kellen",
